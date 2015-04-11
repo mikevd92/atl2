@@ -1,0 +1,7 @@
+# Tracing options for the ExtPetriNetsMM.diagram plug-in
+
+# Common issues
+ExtPetriNetsMM.diagram/debug=false
+
+# Visual IDs
+ExtPetriNetsMM.diagram/debug/visualID=false

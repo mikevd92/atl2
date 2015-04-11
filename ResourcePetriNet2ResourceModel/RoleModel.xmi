@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<roleM:RoleModel
+    xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI"
+    xmlns:roleM="platform:/resource/ResourcePetriNet2ResourceModel/RoleModel.ecore">
+  <resources
+      role="A"
+      nrOfResources="34"/>
+  <tasks name="T1"
+      taskUsesResources="//@resources.0"/>
+  <tasks isPrecededBy="//@tasks.0"
+      name="T2"/>
+</roleM:RoleModel>

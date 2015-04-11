@@ -1,0 +1,7 @@
+eclipse.preferences.version=1
+gmf_dashboard/domainGenerationModel=platform\:/resource/DeclareMM/model/Declare.genmodel
+gmf_dashboard/domainModel=platform\:/resource/DeclareMM/model/Declare.ecore
+gmf_dashboard/generationModel=platform\:/resource/DeclareMM/model/Declare.gmfgen
+gmf_dashboard/graphicalDefinitionModel=platform\:/resource/DeclareMM/model/Declare.gmfgraph
+gmf_dashboard/mappingModel=platform\:/resource/DeclareMM/model/Declare.gmfmap
+gmf_dashboard/toolingDefinitionModel=platform\:/resource/DeclareMM/model/Declare.gmftool

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<PetriNets:PetriNet xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:PetriNets="PetriNets"
+    xsi:schemaLocation="PetriNets PetriNets.ecore">
+  <containsPlaces name="S1" capacity="1" numberOfTokens="1"/>
+  <containsPlaces name="S2" capacity="1"/>
+  <containsPlaces name="S3" capacity="1"/>
+  <containsPlaces name="mEURO" capacity="1"/>
+  <containsPlaces name="mBCOFFEE" capacity="1"/>
+  <containsPlaces name="mCOFFEE" capacity="1"/>
+  <containsTransitions name="T1"/>
+  <containsTransitions name="T2"/>
+  <containsInputArcs InputArcFromPlace="//@containsPlaces.3" InputArcToTransition="//@containsTransitions.0">
+    <weight>1</weight>
+  </containsInputArcs>
+  <containsInputArcs InputArcFromPlace="//@containsPlaces.0" InputArcToTransition="//@containsTransitions.0">
+    <weight>1</weight>
+  </containsInputArcs>
+  <containsInputArcs InputArcFromPlace="//@containsPlaces.4" InputArcToTransition="//@containsTransitions.1">
+    <weight>1</weight>
+  </containsInputArcs>
+  <containsInputArcs InputArcFromPlace="//@containsPlaces.1" InputArcToTransition="//@containsTransitions.1">
+    <weight>1</weight>
+  </containsInputArcs>
+  <containsOutputArcs OutputArcFromTransition="//@containsTransitions.0" OutputArcToPlace="//@containsPlaces.1">
+    <weight>1</weight>
+  </containsOutputArcs>
+  <containsOutputArcs OutputArcFromTransition="//@containsTransitions.1" OutputArcToPlace="//@containsPlaces.2">
+    <weight>1</weight>
+  </containsOutputArcs>
+  <containsOutputArcs OutputArcFromTransition="//@containsTransitions.1" OutputArcToPlace="//@containsPlaces.5">
+    <weight>1</weight>
+  </containsOutputArcs>
+</PetriNets:PetriNet>

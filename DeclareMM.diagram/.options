@@ -1,0 +1,7 @@
+# Tracing options for the DeclareMM.diagram plug-in
+
+# Common issues
+DeclareMM.diagram/debug=false
+
+# Visual IDs
+DeclareMM.diagram/debug/visualID=false

@@ -1,0 +1,87 @@
+-- @path MM=/ExtendedPetriNets2ClassicalPN/ExtendedPetriNets.ecore
+-- @path MM1=/ExtendedPetriNets2ClassicalPN/PetriNets.ecore
+
+module ExtendedPN2ClassicalPN;
+create OUT : PetriNets from IN : ExtendedPetriNets;
+
+rule PN2PN {
+	from
+		pn1 : ExtendedPetriNets!PetriNet
+	to
+		pn2 : PetriNets!PetriNet (
+			name <- pn1.name,
+			containsTransitions <- pn1.containsTransitions,
+			containsPlaces <- Sequence{(pn1.containsGenericPlaces -> select(c | c.oclIsKindOf(ExtendedPetriNets!Place))),
+										(pn1.containsGenericPlaces -> select(c | c.oclIsKindOf(ExtendedPetriNets!InputPort))),
+										(pn1.containsGenericPlaces-> select(c | c.oclIsKindOf(ExtendedPetriNets!OutputPort)))}->flatten(),
+			containsInputArcs <- pn1.containsInputArcs,
+			containsOutputArcs <- pn1.containsOutputArcs
+		)
+}
+rule InputArc2InputArc{
+	from
+		input_arc1:ExtendedPetriNets!InputArc(input_arc1.refImmediateComposite().containsInputArcs->includes(input_arc1))
+	to
+		input_arc2:PetriNets!InputArc(
+			weight <- input_arc1.weight,
+			InputArcToTransition <- input_arc1.InputArcToTransition,
+			InputArcFromPlace <- if not input_arc1.InputArcFromInputPort.oclIsUndefined() then 
+										input_arc1.InputArcFromInputPort
+								 else
+								 		input_arc1.InputArcFromPlace
+								 endif
+		)
+}
+rule OutputArc2OutputArc{
+	from
+		output_arc1:ExtendedPetriNets!OutputArc(output_arc1.refImmediateComposite().containsOutputArcs->includes(output_arc1))
+	to
+		output_arc2:PetriNets!OutputArc(
+			weight <- output_arc1.weight,
+			OutputArcFromTransition <- output_arc1.OutputArcFromTransition,
+			OutputArcToPlace <- if not output_arc1.OutputArcToOutputPort.oclIsUndefined() then
+										output_arc1.OutputArcToOutputPort										
+								else
+										output_arc1.OutputArcToPlace
+								endif
+		)
+}
+
+rule Place2Place{
+	from 
+		place1:ExtendedPetriNets!Place
+	to
+		place2:PetriNets!Place(
+			name <- place1.name,
+			capacity <- place1.capacity,
+			numberOfTokens <- place1.numberOfTokens
+		)
+}
+rule OutputPort2Place{
+	from 
+		output_port:ExtendedPetriNets!OutputPort
+	to
+		place:PetriNets!Place(
+			name <- output_port.name,
+			capacity <- output_port.capacity,
+			numberOfTokens <- output_port.numberOfTokens
+		)
+}
+rule InputPort2Place{
+	from 
+		input_port:ExtendedPetriNets!InputPort
+	to
+		place:PetriNets!Place(
+			name <- input_port.name,
+			capacity <- input_port.capacity,
+			numberOfTokens <- input_port.numberOfTokens
+		)
+}
+rule Transition2Transition{
+	from 
+		transition1:ExtendedPetriNets!Transition(transition1.refImmediateComposite().containsTransitions->includes(transition1))
+	to
+		transition2:PetriNets!Transition(
+			name <- transition1.name
+		)
+}

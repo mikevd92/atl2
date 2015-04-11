@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/ResourcePetriNetsMM/src" modelPluginID="ResourcePetriNetsMM"
+    modelName="ResourcePetriNets" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
+    importerID="org.eclipse.emf.importer.ecore" complianceLevel="6.0" copyrightFields="false"
+    operationReflection="true" importOrganizing="true">
+  <foreignModel>ResourcePetriNets.ecore</foreignModel>
+  <genPackages prefix="resourcePetriNet" basePackage="resourcePetriNet" disposableProviderFactory="true"
+      ecorePackage="ResourcePetriNets.ecore#/">
+    <genClasses ecoreClass="ResourcePetriNets.ecore#//Place">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ResourcePetriNets.ecore#//Place/capacity"/>
+    </genClasses>
+    <genClasses ecoreClass="ResourcePetriNets.ecore#//PetriNet">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ResourcePetriNets.ecore#//PetriNet/name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ResourcePetriNets.ecore#//PetriNet/containsGenericPlaces"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ResourcePetriNets.ecore#//PetriNet/containsTransitions"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ResourcePetriNets.ecore#//PetriNet/containsInputArcs"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ResourcePetriNets.ecore#//PetriNet/containsOutputArcs"/>
+    </genClasses>
+    <genClasses ecoreClass="ResourcePetriNets.ecore#//Transition">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ResourcePetriNets.ecore#//Transition/name"/>
+    </genClasses>
+    <genClasses ecoreClass="ResourcePetriNets.ecore#//InputArc">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference ResourcePetriNets.ecore#//InputArc/InputArcFromPlace"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference ResourcePetriNets.ecore#//InputArc/InputArcToTransition"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ResourcePetriNets.ecore#//InputArc/weight"/>
+    </genClasses>
+    <genClasses ecoreClass="ResourcePetriNets.ecore#//OutputArc">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference ResourcePetriNets.ecore#//OutputArc/OutputArcFromTransition"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference ResourcePetriNets.ecore#//OutputArc/OutputArcToPlace"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ResourcePetriNets.ecore#//OutputArc/weight"/>
+    </genClasses>
+    <genClasses ecoreClass="ResourcePetriNets.ecore#//Resource"/>
+    <genClasses image="false" ecoreClass="ResourcePetriNets.ecore#//GenericPlace">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ResourcePetriNets.ecore#//GenericPlace/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ResourcePetriNets.ecore#//GenericPlace/numberOfTokens"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>
