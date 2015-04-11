@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="ASCII"?>
+<cde:Company
+    xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:cde="platfrom:/resource/Homework1ATL/CDE.ecore"
+    xsi:schemaLocation="platfrom:/resource/Homework1ATL/CDE.ecore CDE.ecore">
+  <belongs name="Finance">
+    <works name="Francis"
+        address="Cederlaan"/>
+  </belongs>
+  <belongs name="Business">
+    <works name="John"
+        address="HoffStraat"/>
+  </belongs>
+</cde:Company>

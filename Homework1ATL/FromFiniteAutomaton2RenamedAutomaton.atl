@@ -1,0 +1,40 @@
+-- @path FiniteAutomaton=/Homework1ATL/finite_automaton.ecore
+
+module FromFiniteAutomaton2RenamedAutomaton;
+create OUT : FiniteAutomaton from IN : FiniteAutomaton;
+
+
+rule FiniteAutomaton2FiniteAutomaton{
+	from  f: FiniteAutomaton!Automaton	
+	to f2: FiniteAutomaton!Automaton(
+			containsStates <- f.containsStates,
+			containsTransitions <- f.containsTransitions 
+			)
+}
+
+rule StateToState{
+	from state1:FiniteAutomaton!State
+	to state2:FiniteAutomaton!State(
+		name <- state1.name,
+		initial <- state1.initial,
+		final <- state1.final	
+	)
+}
+
+rule BeginTransition2Transition{
+	from transition1:FiniteAutomaton!Transition(transition1.name='a' and transition1.from.initial=true)
+	to transition2:FiniteAutomaton!Transition(
+			name <- 'begin',
+			from <- transition1.from,
+			to <- transition1.to
+	)
+}
+rule Transition2Transition{
+	from transition1:FiniteAutomaton!Transition(transition1.name<>'a' or transition1.from.initial<>true)
+	to transition2:FiniteAutomaton!Transition(
+			name <- transition1.name,
+			from <- transition1.from,
+			to <- transition1.to
+	)
+}
+

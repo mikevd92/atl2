@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<automaton:Automaton xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:automaton="platform:/resource/Homework1ATL/finite_automaton.ecore">
+  <containsStates initial="true" name="A"/>
+  <containsStates final="true" name="B"/>
+  <containsStates final="true" name="C"/>
+  <containsTransitions name="a" to="//@containsStates.1" from="//@containsStates.0"/>
+  <containsTransitions name="h" to="//@containsStates.2" from="//@containsStates.1"/>
+  <containsTransitions name="b" to="//@containsStates.1" from="//@containsStates.0"/>
+</automaton:Automaton>

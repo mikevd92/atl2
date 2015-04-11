@@ -1,0 +1,22 @@
+-- @path CE=/Homework1ATL/CE.ecore
+-- @path CDE=/Homework1ATL/CDE.ecore
+
+module CDE2CE;
+create OUT : CE from IN : CDE;
+
+rule Company2Company{
+	from  company1: CDE!Company	
+	to company2: CE!Company(
+		name <- company1.name,
+		works <- company1.belongs -> collect(c | c.works)
+	)
+}
+
+rule EmployeeToEmployee{
+	from employee1:CDE!Employee
+	to employee2:CE!Employee(
+			name <- employee1.name,
+			address <- employee1.address,
+			department <- employee1.refImmediateComposite().name
+	)
+}

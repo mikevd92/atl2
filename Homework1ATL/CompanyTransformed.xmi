@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<ce:Company xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ce="platform:/resource/Homework1ATL/CE.ecore">
+  <works name="Francis" address="Cederlaan" department="Finance"/>
+  <works name="John" address="HoffStraat" department="Business"/>
+</ce:Company>

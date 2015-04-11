@@ -1,0 +1,46 @@
+-- @path FiniteAutomaton=/Homework1ATL/finite_automaton.ecore
+
+module FromFiniteAutomaton2ReducedAutomaton;
+create OUT : FiniteAutomaton from IN : FiniteAutomaton;
+
+
+rule FiniteAutomaton2FiniteAutomaton{
+	from  f: FiniteAutomaton!Automaton	
+	to f2: FiniteAutomaton!Automaton(
+			containsStates <- f.containsStates,
+			containsTransitions <- f.containsTransitions
+	)
+}
+
+rule StateToState{
+	from state1:FiniteAutomaton!State
+	to state2:FiniteAutomaton!State(
+		name <- state1.name,
+		initial <- state1.initial,
+		final <- state1.final	
+	)
+}
+
+rule Transition2TransitionNotBWithSameSourceAsB{
+	from transition1:FiniteAutomaton!Transition(transition1.name<>'b' and (((FiniteAutomaton!Transition.allInstances()) 
+								-> select (e | e.name='b')) 
+									-> collect(r | r.from)) 
+										-> includes(transition1.from))
+	to transition2:FiniteAutomaton!Transition(
+			name <- transition1.name,
+			from <- transition1.from,
+			to <- transition1.to
+	)
+}
+
+rule Transition2TransitionNotBWithDifferentSourceAsB{
+	from transition1:FiniteAutomaton!Transition(transition1.name<>'b' and (((FiniteAutomaton!Transition.allInstances()) 
+								-> select(e | e.name='b')) 
+									-> collect(r | r.from)) 
+										-> excludes(transition1.from))
+	to transition2:FiniteAutomaton!Transition(
+			name <- transition1.name,
+			from <- transition1.from,
+			to <- transition1.to
+	)
+}

@@ -1,0 +1,37 @@
+-- @path FiniteAutomaton=/Homework1ATL/finite_automaton.ecore
+
+module ReverseFiniteAutomaton2DoubleAutomaton;
+create OUT : FiniteAutomaton from IN : FiniteAutomaton;
+
+
+rule FiniteAutomaton2FiniteAutomaton{
+	from  f: FiniteAutomaton!Automaton	
+	to 
+	t1: FiniteAutomaton!Transition(
+		name <- 'b',
+		from <- f.containsStates -> any(c | c.name='A'),	
+		to <- f.containsStates -> any(c | c.name='B')
+	),
+	f2: FiniteAutomaton!Automaton(
+			containsStates <- f.containsStates,
+			containsTransitions <- f.containsTransitions -> including(t1)
+	)
+}
+
+rule StateToStateNoTSplitState{
+	from state1:FiniteAutomaton!State(state1.name<>'split_state')
+	to state2:FiniteAutomaton!State(
+		name <- state1.name,
+		initial <- state1.initial,
+		final <- state1.final	
+	)
+}
+
+rule Transition2TransitionNotXAndNotY{
+	from transition1:FiniteAutomaton!Transition(transition1.name<>'x' and transition1.name<>'y')
+	to transition2:FiniteAutomaton!Transition(
+			name <- transition1.name,
+			from <- transition1.from,
+			to <- transition1.to
+	)
+}

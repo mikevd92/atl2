@@ -1,0 +1,35 @@
+-- @path FiniteAutomaton=/Homework1ATL/finite_automaton.ecore
+
+module FromFiniteAutomaton2DoubleAutomaton;
+create OUT : FiniteAutomaton from IN : FiniteAutomaton;
+
+
+rule FiniteAutomaton2FiniteAutomaton{
+	from  f: FiniteAutomaton!Automaton,
+		  t: FiniteAutomaton!Transition(t.name='b')		
+	to state:FiniteAutomaton!State(name <- 'split_state',initial <- false,final <-false),
+		t1:FiniteAutomaton!Transition(name <-'x',from <- t.from,to <- state),
+		t2:FiniteAutomaton!Transition(name <-'y',from <- state,to <- t.to),
+		f2:FiniteAutomaton!Automaton(
+			containsStates <- f.containsStates -> including(state),
+			containsTransitions <- (f.containsTransitions) -> union (Sequence{t1,t2})
+		)
+}
+
+rule StateToState{
+	from state1:FiniteAutomaton!State
+	to state2:FiniteAutomaton!State(
+		name <- state1.name,
+		initial <- state1.initial,
+		final <- state1.final	
+	)
+}
+
+rule Transition2Transition{
+	from transition1:FiniteAutomaton!Transition(transition1.name<>'b')
+	to transition2:FiniteAutomaton!Transition(
+			name <- transition1.name,
+			from <- transition1.from,
+			to <- transition1.to
+	)
+}
