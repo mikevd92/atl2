@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<notation:Diagram xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.2/notation" xmi:id="_WbeBcE71EeSzwuQEEvIoiQ" type="Ecore" measurementUnit="Pixel">
+  <children xmi:type="notation:Shape" xmi:id="_WcqUQk71EeSzwuQEEvIoiQ" type="2001" fontName="Segoe UI">
+    <children xmi:type="notation:DecorationNode" xmi:id="_WcqURE71EeSzwuQEEvIoiQ" type="5001"/>
+    <children xmi:type="notation:BasicCompartment" xmi:id="_WcqURU71EeSzwuQEEvIoiQ" type="7001">
+      <styles xmi:type="notation:SortingStyle" xmi:id="_WcqURk71EeSzwuQEEvIoiQ"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_WcqUR071EeSzwuQEEvIoiQ"/>
+    </children>
+    <children xmi:type="notation:BasicCompartment" xmi:id="_WcqUSE71EeSzwuQEEvIoiQ" type="7002">
+      <styles xmi:type="notation:SortingStyle" xmi:id="_WcqUSU71EeSzwuQEEvIoiQ"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_WcqUSk71EeSzwuQEEvIoiQ"/>
+    </children>
+    <children xmi:type="notation:BasicCompartment" xmi:id="_WcqUS071EeSzwuQEEvIoiQ" type="7003">
+      <styles xmi:type="notation:SortingStyle" xmi:id="_WcqUTE71EeSzwuQEEvIoiQ"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_WcqUTU71EeSzwuQEEvIoiQ"/>
+    </children>
+    <element xmi:type="ecore:EClass" href="RDBMS.ecore#//RDBMSModel"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_WcqUQ071EeSzwuQEEvIoiQ" x="252" y="36"/>
+  </children>
+  <children xmi:type="notation:Shape" xmi:id="_WcqUTk71EeSzwuQEEvIoiQ" type="2001" fontName="Segoe UI">
+    <children xmi:type="notation:DecorationNode" xmi:id="_WcqUUE71EeSzwuQEEvIoiQ" type="5001"/>
+    <children xmi:type="notation:BasicCompartment" xmi:id="_WcqUUU71EeSzwuQEEvIoiQ" type="7001">
+      <styles xmi:type="notation:SortingStyle" xmi:id="_WcqUUk71EeSzwuQEEvIoiQ"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_WcqUU071EeSzwuQEEvIoiQ"/>
+    </children>
+    <children xmi:type="notation:BasicCompartment" xmi:id="_WcqUVE71EeSzwuQEEvIoiQ" type="7002">
+      <styles xmi:type="notation:SortingStyle" xmi:id="_WcqUVU71EeSzwuQEEvIoiQ"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_WcqUVk71EeSzwuQEEvIoiQ"/>
+    </children>
+    <children xmi:type="notation:BasicCompartment" xmi:id="_WcqUV071EeSzwuQEEvIoiQ" type="7003">
+      <styles xmi:type="notation:SortingStyle" xmi:id="_WcqUWE71EeSzwuQEEvIoiQ"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_WcqUWU71EeSzwuQEEvIoiQ"/>
+    </children>
+    <element xmi:type="ecore:EClass" href="RDBMS.ecore#//Table"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_WcqUT071EeSzwuQEEvIoiQ" x="30" y="155"/>
+  </children>
+  <children xmi:type="notation:Shape" xmi:id="_WcqUWk71EeSzwuQEEvIoiQ" type="2001" fontName="Segoe UI">
+    <children xmi:type="notation:DecorationNode" xmi:id="_WcqUXE71EeSzwuQEEvIoiQ" type="5001"/>
+    <children xmi:type="notation:BasicCompartment" xmi:id="_WcqUXU71EeSzwuQEEvIoiQ" type="7001">
+      <styles xmi:type="notation:SortingStyle" xmi:id="_WcqUXk71EeSzwuQEEvIoiQ"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_WcqUX071EeSzwuQEEvIoiQ"/>
+    </children>
+    <children xmi:type="notation:BasicCompartment" xmi:id="_WcqUYE71EeSzwuQEEvIoiQ" type="7002">
+      <styles xmi:type="notation:SortingStyle" xmi:id="_WcqUYU71EeSzwuQEEvIoiQ"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_WcqUYk71EeSzwuQEEvIoiQ"/>
+    </children>
+    <children xmi:type="notation:BasicCompartment" xmi:id="_WcqUY071EeSzwuQEEvIoiQ" type="7003">
+      <styles xmi:type="notation:SortingStyle" xmi:id="_WcqUZE71EeSzwuQEEvIoiQ"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_WcqUZU71EeSzwuQEEvIoiQ"/>
+    </children>
+    <element xmi:type="ecore:EClass" href="RDBMS.ecore#//Column"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_WcqUW071EeSzwuQEEvIoiQ" x="565" y="165"/>
+  </children>
+  <children xmi:type="notation:Shape" xmi:id="_WcqUZk71EeSzwuQEEvIoiQ" type="2001" fontName="Segoe UI">
+    <children xmi:type="notation:DecorationNode" xmi:id="_WcqUaE71EeSzwuQEEvIoiQ" type="5001"/>
+    <children xmi:type="notation:BasicCompartment" xmi:id="_WcqUaU71EeSzwuQEEvIoiQ" type="7001">
+      <styles xmi:type="notation:SortingStyle" xmi:id="_WcqUak71EeSzwuQEEvIoiQ"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_WcqUa071EeSzwuQEEvIoiQ"/>
+    </children>
+    <children xmi:type="notation:BasicCompartment" xmi:id="_WcqUbE71EeSzwuQEEvIoiQ" type="7002">
+      <styles xmi:type="notation:SortingStyle" xmi:id="_WcqUbU71EeSzwuQEEvIoiQ"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_WcqUbk71EeSzwuQEEvIoiQ"/>
+    </children>
+    <children xmi:type="notation:BasicCompartment" xmi:id="_WcqUb071EeSzwuQEEvIoiQ" type="7003">
+      <styles xmi:type="notation:SortingStyle" xmi:id="_WcqUcE71EeSzwuQEEvIoiQ"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_WcqUcU71EeSzwuQEEvIoiQ"/>
+    </children>
+    <element xmi:type="ecore:EClass" href="RDBMS.ecore#//ForeignKey"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_WcqUZ071EeSzwuQEEvIoiQ" x="204" y="336"/>
+  </children>
+  <styles xmi:type="notation:DiagramStyle" xmi:id="_WbeBcU71EeSzwuQEEvIoiQ"/>
+  <element xmi:type="ecore:EPackage" href="RDBMS.ecore#/"/>
+  <edges xmi:type="notation:Connector" xmi:id="_n4dcwE71EeSzwuQEEvIoiQ" type="4003" source="_WcqUQk71EeSzwuQEEvIoiQ" target="_WcqUTk71EeSzwuQEEvIoiQ">
+    <children xmi:type="notation:DecorationNode" xmi:id="_n4dcw071EeSzwuQEEvIoiQ" visible="false" type="6002">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_n4dcxE71EeSzwuQEEvIoiQ" y="40"/>
+    </children>
+    <children xmi:type="notation:DecorationNode" xmi:id="_n4dcxU71EeSzwuQEEvIoiQ" type="6004">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_n4dcxk71EeSzwuQEEvIoiQ" x="11" y="29"/>
+    </children>
+    <styles xmi:type="notation:FontStyle" xmi:id="_n4dcwU71EeSzwuQEEvIoiQ" fontName="Segoe UI"/>
+    <element xmi:type="ecore:EReference" href="RDBMS.ecore#//RDBMSModel/containsTables"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_n4dcwk71EeSzwuQEEvIoiQ" points="[-33, 26, 106, -86]$[-137, 106, 2, -6]"/>
+    <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_n4dcx071EeSzwuQEEvIoiQ" id="(0.5943396226415094,0.1016949152542373)"/>
+  </edges>
+  <edges xmi:type="notation:Connector" xmi:id="_rY42kE71EeSzwuQEEvIoiQ" type="4003" source="_WcqUTk71EeSzwuQEEvIoiQ" target="_WcqUZk71EeSzwuQEEvIoiQ">
+    <children xmi:type="notation:DecorationNode" xmi:id="_rY42k071EeSzwuQEEvIoiQ" type="6002">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_rY42lE71EeSzwuQEEvIoiQ" y="40"/>
+    </children>
+    <children xmi:type="notation:DecorationNode" xmi:id="_rY42lU71EeSzwuQEEvIoiQ" type="6004">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_rY42lk71EeSzwuQEEvIoiQ" x="1" y="27"/>
+    </children>
+    <styles xmi:type="notation:FontStyle" xmi:id="_rY42kU71EeSzwuQEEvIoiQ" fontName="Segoe UI"/>
+    <element xmi:type="ecore:EReference" href="RDBMS.ecore#//Table/foreignKeys"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_rY42kk71EeSzwuQEEvIoiQ" points="[30, 30, -112, -123]$[181, 148, 39, -5]"/>
+    <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_x_pvME71EeSzwuQEEvIoiQ" id="(0.07692307692307693,0.019230769230769232)"/>
+  </edges>
+  <edges xmi:type="notation:Connector" xmi:id="_vDmNwE71EeSzwuQEEvIoiQ" type="4002" source="_WcqUZk71EeSzwuQEEvIoiQ" target="_WcqUTk71EeSzwuQEEvIoiQ">
+    <children xmi:type="notation:DecorationNode" xmi:id="_vDmNw071EeSzwuQEEvIoiQ" type="6001">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_vDmNxE71EeSzwuQEEvIoiQ" y="40"/>
+    </children>
+    <children xmi:type="notation:DecorationNode" xmi:id="_vDmNxU71EeSzwuQEEvIoiQ" type="6003">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_vDmNxk71EeSzwuQEEvIoiQ" x="-1" y="21"/>
+    </children>
+    <styles xmi:type="notation:FontStyle" xmi:id="_vDmNwU71EeSzwuQEEvIoiQ" fontName="Segoe UI"/>
+    <element xmi:type="ecore:EReference" href="RDBMS.ecore#//ForeignKey/references"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_vDmNwk71EeSzwuQEEvIoiQ" points="[-7, -8, 107, 133]$[-94, -145, 20, -4]"/>
+    <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_vDmNx071EeSzwuQEEvIoiQ" id="(0.5641025641025641,0.15384615384615385)"/>
+    <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_vDmNyE71EeSzwuQEEvIoiQ" id="(0.8113207547169812,0.3898305084745763)"/>
+  </edges>
+  <edges xmi:type="notation:Connector" xmi:id="_0CphsE71EeSzwuQEEvIoiQ" type="4002" source="_WcqUZk71EeSzwuQEEvIoiQ" target="_WcqUWk71EeSzwuQEEvIoiQ">
+    <children xmi:type="notation:DecorationNode" xmi:id="_0Cphs071EeSzwuQEEvIoiQ" type="6001">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_0CphtE71EeSzwuQEEvIoiQ" x="15" y="22"/>
+    </children>
+    <children xmi:type="notation:DecorationNode" xmi:id="_0CphtU71EeSzwuQEEvIoiQ" type="6003">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_0Cphtk71EeSzwuQEEvIoiQ" x="-4" y="17"/>
+    </children>
+    <styles xmi:type="notation:FontStyle" xmi:id="_0CphsU71EeSzwuQEEvIoiQ" fontName="Segoe UI"/>
+    <element xmi:type="ecore:EReference" href="RDBMS.ecore#//ForeignKey/columns"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_0Cphsk71EeSzwuQEEvIoiQ" points="[32, -26, -162, 135]$[247, -166, 53, -5]"/>
+  </edges>
+  <edges xmi:type="notation:Connector" xmi:id="_3Z044E71EeSzwuQEEvIoiQ" type="4003" source="_WcqUTk71EeSzwuQEEvIoiQ" target="_WcqUWk71EeSzwuQEEvIoiQ">
+    <children xmi:type="notation:DecorationNode" xmi:id="_3Z044071EeSzwuQEEvIoiQ" type="6002">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_3Z045E71EeSzwuQEEvIoiQ" x="6" y="22"/>
+    </children>
+    <children xmi:type="notation:DecorationNode" xmi:id="_3Z045U71EeSzwuQEEvIoiQ" type="6004">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_3Z045k71EeSzwuQEEvIoiQ" y="10"/>
+    </children>
+    <styles xmi:type="notation:FontStyle" xmi:id="_3Z044U71EeSzwuQEEvIoiQ" fontName="Segoe UI"/>
+    <element xmi:type="ecore:EReference" href="RDBMS.ecore#//Table/columns"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_3Z044k71EeSzwuQEEvIoiQ" points="[53, 2, -235, -2]$[286, -33, -2, -37]"/>
+  </edges>
+  <edges xmi:type="notation:Connector" xmi:id="_85SLME71EeSzwuQEEvIoiQ" type="4002" source="_WcqUTk71EeSzwuQEEvIoiQ" target="_WcqUWk71EeSzwuQEEvIoiQ">
+    <children xmi:type="notation:DecorationNode" xmi:id="_85SLM071EeSzwuQEEvIoiQ" type="6001">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_85SLNE71EeSzwuQEEvIoiQ" x="13" y="-19"/>
+    </children>
+    <children xmi:type="notation:DecorationNode" xmi:id="_85SLNU71EeSzwuQEEvIoiQ" type="6003">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_85SLNk71EeSzwuQEEvIoiQ" x="7" y="-25"/>
+    </children>
+    <styles xmi:type="notation:FontStyle" xmi:id="_85SLMU71EeSzwuQEEvIoiQ" fontName="Segoe UI"/>
+    <element xmi:type="ecore:EReference" href="RDBMS.ecore#//Table/primaryKey"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_85SLMk71EeSzwuQEEvIoiQ" points="[17, 5, -222, 0]$[227, -13, -12, -18]"/>
+    <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_85SLN071EeSzwuQEEvIoiQ" id="(0.839622641509434,0.15254237288135594)"/>
+    <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_85SLOE71EeSzwuQEEvIoiQ" id="(0.37735849056603776,0.24)"/>
+  </edges>
+  <edges xmi:type="notation:Connector" xmi:id="_QtxJcFIDEeSHI5IMeqCoeQ" type="4003" source="_WcqUQk71EeSzwuQEEvIoiQ" target="_WcqUWk71EeSzwuQEEvIoiQ">
+    <children xmi:type="notation:DecorationNode" xmi:id="_QtxJc1IDEeSHI5IMeqCoeQ" type="6002">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_QtxJdFIDEeSHI5IMeqCoeQ" x="30" y="-69"/>
+    </children>
+    <children xmi:type="notation:DecorationNode" xmi:id="_QtxJdVIDEeSHI5IMeqCoeQ" type="6004">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_QtxJdlIDEeSHI5IMeqCoeQ" x="6" y="-30"/>
+    </children>
+    <styles xmi:type="notation:FontStyle" xmi:id="_QtxJcVIDEeSHI5IMeqCoeQ" fontName="Segoe UI"/>
+    <element xmi:type="ecore:EReference" href="RDBMS.ecore#//RDBMSModel/containsColumns"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_QtxJclIDEeSHI5IMeqCoeQ" points="[14, 16, -93, -135]$[160, 146, 53, -5]"/>
+    <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_Qt66cFIDEeSHI5IMeqCoeQ" id="(0.8478260869565217,0.2692307692307692)"/>
+  </edges>
+  <edges xmi:type="notation:Connector" xmi:id="_WEy4gFIDEeSHI5IMeqCoeQ" type="4003" source="_WcqUQk71EeSzwuQEEvIoiQ" target="_WcqUZk71EeSzwuQEEvIoiQ">
+    <children xmi:type="notation:DecorationNode" xmi:id="_WEy4g1IDEeSHI5IMeqCoeQ" type="6002">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_WEy4hFIDEeSHI5IMeqCoeQ" x="40" y="-92"/>
+    </children>
+    <children xmi:type="notation:DecorationNode" xmi:id="_WEy4hVIDEeSHI5IMeqCoeQ" type="6004">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_WEy4hlIDEeSHI5IMeqCoeQ" y="60"/>
+    </children>
+    <styles xmi:type="notation:FontStyle" xmi:id="_WEy4gVIDEeSHI5IMeqCoeQ" fontName="Segoe UI"/>
+    <element xmi:type="ecore:EReference" href="RDBMS.ecore#//RDBMSModel/containsForeignKeys"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_WEy4glIDEeSHI5IMeqCoeQ" points="[-6, 49, 43, -274]$[-19, 297, 30, -26]"/>
+    <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_WEy4h1IDEeSHI5IMeqCoeQ" id="(0.43478260869565216,0.057692307692307696)"/>
+  </edges>
+</notation:Diagram>

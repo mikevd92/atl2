@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="ASCII"?>
+<SimpleClass:ClassModel
+    xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:SimpleClass="SimpleClass"
+    xsi:schemaLocation="SimpleClass SimpleClass.ecore">
+  <classifiers
+      xsi:type="SimpleClass:Class"
+      name="Dog"
+      persistent="true">
+    <attributes
+        name="name"
+        type="//@classifiers.1"/>
+  </classifiers>
+  <classifiers
+      xsi:type="SimpleClass:PrimitiveDataType"
+      name="String"/>
+  <classifiers
+      xsi:type="SimpleClass:PrimitiveDataType"
+      name="Int"/>
+  <classifiers
+      xsi:type="SimpleClass:Class"
+      name="Bird"
+      persistent="true">
+    <attributes
+        name="gender"
+        type="//@classifiers.1"/>
+  </classifiers>
+</SimpleClass:ClassModel>

@@ -1,0 +1,64 @@
+-- @path SimpleClass=/SimpleClass2RDBMS/SimpleClass.ecore
+-- @path RDBMS=/SimpleClass2RDBMS/RDBMS.ecore
+
+module SimpleClass2RDBMS;
+create OUT: RDBMS from IN: SimpleClass;
+
+helper context SimpleClass!Class def: id: Sequence(SimpleClass!Attribute)=
+	self.attributes -> select(attr | 
+		attr.oclIsKindOf(SimpleClass!PrimitiveDataType)
+		and attr.id);
+
+helper context SimpleClass!ClassModel def: classes: Sequence(SimpleClass!Class)=
+	self.classifiers -> select(c | c.oclIsKindOf(SimpleClass!Class));
+
+helper context SimpleClass!Class def: associations: Sequence(SimpleClass!Association)=
+	SimpleClass!Association.allInstances() -> select(asso | asso.source = self);
+
+rule ClassModel2RDBMSModel {
+	from
+		model: SimpleClass!ClassModel	
+	to
+		rdbms: RDBMS!RDBMSModel (
+			containsTables <- model.classes	
+		)
+}
+
+rule persistentClass2Table {
+	from
+		class:SimpleClass!Class(class.persistent)
+	to
+		table:RDBMS!Table (
+			name <- class.name,
+			columns <- Sequence{class.attributes,class.associations}->flatten(),
+			primaryKey <- class.id,
+			foreignKeys <- thisModule.resolveTemp(class.associations -> collect(a | thisModule.Association2Column(a)), 'fkey')
+		)
+}
+
+rule Association2Column {
+	from
+		assoc:SimpleClass!Association(assoc.refImmediateComposite().associations->includes(assoc))	
+	to
+		col:RDBMS!Column (
+			name <- assoc.name + '_' + assoc.target.id.name,
+			type <- assoc.target.is.type
+		),
+		
+		fkey:RDBMS!ForeignKey (
+			references <- assoc.target,
+			columns <- col
+		)
+}
+
+rule PrimitiveAttribute2Column {
+	from
+		attr:SimpleClass!Attribute (
+			attr.type.oclIsKindOf(SimpleClass!PrimitiveDataType) and attr.refImmediateComposite().attributes->includes(attr)
+		)
+	to
+		col:RDBMS!Column (
+			name <- attr.name,
+			type <- attr.type.name
+		)		
+}

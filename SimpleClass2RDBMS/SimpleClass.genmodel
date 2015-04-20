@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/SimpleClass2RDBMS/src" modelPluginID="SimpleClass2RDBMS"
+    modelName="SimpleClass" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
+    importerID="org.eclipse.emf.importer.ecore" complianceLevel="6.0" copyrightFields="false"
+    runtimeVersion="2.6" operationReflection="true" importOrganizing="true">
+  <foreignModel>SimpleClass.ecore</foreignModel>
+  <genPackages prefix="SimpleClass" disposableProviderFactory="true" ecorePackage="SimpleClass.ecore#/">
+    <genClasses ecoreClass="SimpleClass.ecore#//ClassModel">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference SimpleClass.ecore#//ClassModel/classifiers"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference SimpleClass.ecore#//ClassModel/associations"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="SimpleClass.ecore#//Classifier">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SimpleClass.ecore#//Classifier/name"/>
+    </genClasses>
+    <genClasses ecoreClass="SimpleClass.ecore#//Association">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SimpleClass.ecore#//Association/name"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference SimpleClass.ecore#//Association/source"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference SimpleClass.ecore#//Association/target"/>
+    </genClasses>
+    <genClasses ecoreClass="SimpleClass.ecore#//Class">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SimpleClass.ecore#//Class/persistent"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference SimpleClass.ecore#//Class/super"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference SimpleClass.ecore#//Class/attributes"/>
+    </genClasses>
+    <genClasses ecoreClass="SimpleClass.ecore#//PrimitiveDataType"/>
+    <genClasses ecoreClass="SimpleClass.ecore#//Attribute">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SimpleClass.ecore#//Attribute/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SimpleClass.ecore#//Attribute/id"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference SimpleClass.ecore#//Attribute/type"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<rdb:RDBMSModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:rdb="platform:/resource/SimpleClass2RDBMS/RDBMS.ecore">
+  <containsTables name="Dog">
+    <columns name="name" type="String"/>
+  </containsTables>
+  <containsTables name="Bird">
+    <columns name="gender" type="String"/>
+  </containsTables>
+</rdb:RDBMSModel>
