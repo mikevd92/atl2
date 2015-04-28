@@ -1,0 +1,7 @@
+# Tracing options for the ResourcePetriNetsMM.diagram plug-in
+
+# Common issues
+ResourcePetriNetsMM.diagram/debug=false
+
+# Visual IDs
+ResourcePetriNetsMM.diagram/debug/visualID=false

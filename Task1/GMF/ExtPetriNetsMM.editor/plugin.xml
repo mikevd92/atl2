@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+-->
+
+<plugin>
+
+   <extension point="org.eclipse.ui.newWizards">
+      <!-- @generated ExtPetriNets -->
+      <category
+            id="org.eclipse.emf.ecore.Wizard.category.ID"
+            name="%_UI_Wizard_category"/>
+      <wizard
+            id="extendedPetriNets.extendedPetriNets.presentation.extendedPetriNetsModelWizardID"
+            name="%_UI_extendedPetriNetsModelWizard_label"
+            class="extendedPetriNets.extendedPetriNets.presentation.extendedPetriNetsModelWizard"
+            category="org.eclipse.emf.ecore.Wizard.category.ID"
+            icon="icons/full/obj16/extendedPetriNetsModelFile.gif">
+         <description>%_UI_extendedPetriNetsModelWizard_description</description>
+         <selection class="org.eclipse.core.resources.IResource"/>
+      </wizard>
+   </extension>
+
+   <extension point="org.eclipse.ui.editors">
+      <!-- @generated ExtPetriNets -->
+      <editor
+            id="extendedPetriNets.extendedPetriNets.presentation.extendedPetriNetsEditorID"
+            name="%_UI_extendedPetriNetsEditor_label"
+            icon="icons/full/obj16/extendedPetriNetsModelFile.gif"
+            extensions="extendedpetrinets"
+            class="extendedPetriNets.extendedPetriNets.presentation.extendedPetriNetsEditor"
+            contributorClass="extendedPetriNets.extendedPetriNets.presentation.extendedPetriNetsActionBarContributor">
+      </editor>
+   </extension>
+
+</plugin>

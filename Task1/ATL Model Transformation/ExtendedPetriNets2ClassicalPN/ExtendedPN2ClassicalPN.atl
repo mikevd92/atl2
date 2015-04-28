@@ -1,0 +1,78 @@
+-- @path MM=/ExtendedPetriNets2ClassicalPN/ExtendedPetriNets.ecore
+-- @path MM1=/ExtendedPetriNets2ClassicalPN/PetriNets.ecore
+
+module ExtendedPN2ClassicalPN;
+create OUT : PetriNets from IN : ExtendedPetriNets;
+
+rule PN2PN {
+	from
+		pn1 : ExtendedPetriNets!PetriNet
+	to
+		pn2 : PetriNets!PetriNet (
+			name <- pn1.name,
+			containsTransitions <- pn1.containsTransitions,
+			containsPlaces <- pn1.containsGenericPlaces,
+			containsInputArcs <- pn1.containsInputArcs,
+			containsOutputArcs <- pn1.containsOutputArcs
+		)
+}
+rule InputArc2InputArc{
+	from
+		input_arc1:ExtendedPetriNets!InputArc
+	to
+		input_arc2:PetriNets!InputArc(
+			weight <- input_arc1.weight,
+			InputArcToTransition <- input_arc1.InputArcToTransition,
+			InputArcFromPlace <- input_arc1.InputArcFromPlace
+								
+		)
+}
+rule OutputArc2OutputArc{
+	from
+		output_arc1:ExtendedPetriNets!OutputArc
+	to
+		output_arc2:PetriNets!OutputArc(
+			weight <- output_arc1.weight,
+			OutputArcFromTransition <- output_arc1.OutputArcFromTransition,
+			OutputArcToPlace <- output_arc1.OutputArcToPlace				
+		)
+}
+
+rule Place2Place{
+	from 
+		place1:ExtendedPetriNets!Place(place1.refImmediateComposite().containsGenericPlaces->includes(place1))
+	to
+		place2:PetriNets!Place(
+			name <- place1.name,
+			capacity <- place1.capacity,
+			numberOfTokens <- place1.numberOfTokens
+		)
+}
+rule InputPort2Place{
+	from 
+		place1:ExtendedPetriNets!InputPort(place1.refImmediateComposite().containsGenericPlaces->includes(place1))
+	to
+		place2:PetriNets!Place(
+			name <- place1.name,
+			capacity <- place1.capacity,
+			numberOfTokens <- place1.numberOfTokens
+		)
+}
+rule OutputPort2Place{
+	from 
+		place1:ExtendedPetriNets!OutputPort(place1.refImmediateComposite().containsGenericPlaces->includes(place1))
+	to
+		place2:PetriNets!Place(
+			name <- place1.name,
+			capacity <- place1.capacity,
+			numberOfTokens <- place1.numberOfTokens
+		)
+}
+rule Transition2Transition{
+	from 
+		transition1:ExtendedPetriNets!Transition(transition1.refImmediateComposite().containsTransitions->includes(transition1))
+	to
+		transition2:PetriNets!Transition(
+			name <- transition1.name
+		)
+}

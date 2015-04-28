@@ -1,0 +1,7 @@
+eclipse.preferences.version=1
+gmf_dashboard/domainGenerationModel=platform\:/resource/ResourcePetriNet2ResourceModel/RoleModel.genmodel
+gmf_dashboard/domainModel=platform\:/resource/ResourcePetriNet2ResourceModel/RoleModel.ecore
+gmf_dashboard/generationModel=platform\:/resource/ResourcePetriNet2ResourceModel/RoleModel.gmfgen
+gmf_dashboard/graphicalDefinitionModel=platform\:/resource/ResourcePetriNet2ResourceModel/RoleModel.gmfgraph
+gmf_dashboard/mappingModel=platform\:/resource/ResourcePetriNet2ResourceModel/RoleModel.gmfmap
+gmf_dashboard/toolingDefinitionModel=platform\:/resource/ResourcePetriNet2ResourceModel/RoleModel.gmftool

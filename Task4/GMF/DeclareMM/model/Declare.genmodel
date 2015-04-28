@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/DeclareMM/src" modelPluginID="DeclareMM" modelName="Declare"
+    rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container" importerID="org.eclipse.emf.importer.ecore"
+    complianceLevel="5.0" copyrightFields="false" operationReflection="true" importOrganizing="true">
+  <foreignModel>Declare.ecore</foreignModel>
+  <genPackages prefix="declare" basePackage="declare" disposableProviderFactory="true"
+      ecorePackage="Declare.ecore#/">
+    <genClasses ecoreClass="Declare.ecore#//Declare">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Declare.ecore#//Declare/containsActivities"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Declare.ecore#//Declare/containsConstraints"/>
+    </genClasses>
+    <genClasses ecoreClass="Declare.ecore#//Activity">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Declare.ecore#//Activity/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Declare.ecore#//Activity/existenceLabel"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Declare.ecore#//Activity/init"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="Declare.ecore#//Constraint">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Declare.ecore#//Constraint/label"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Declare.ecore#//Constraint/toActivity"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Declare.ecore#//Constraint/fromActivity"/>
+    </genClasses>
+    <genClasses ecoreClass="Declare.ecore#//RespondedExistence"/>
+    <genClasses ecoreClass="Declare.ecore#//CoExistence"/>
+    <genClasses ecoreClass="Declare.ecore#//Response"/>
+    <genClasses ecoreClass="Declare.ecore#//Precedence"/>
+    <genClasses ecoreClass="Declare.ecore#//Succession"/>
+    <genClasses ecoreClass="Declare.ecore#//AlternateResponse"/>
+    <genClasses ecoreClass="Declare.ecore#//AlternatePrecedence"/>
+    <genClasses ecoreClass="Declare.ecore#//ChainResponse"/>
+    <genClasses ecoreClass="Declare.ecore#//ChainSuccession"/>
+    <genClasses ecoreClass="Declare.ecore#//ChainPrecedence"/>
+    <genClasses ecoreClass="Declare.ecore#//NotCoExistence"/>
+    <genClasses ecoreClass="Declare.ecore#//NotRespondedExistence"/>
+    <genClasses ecoreClass="Declare.ecore#//NotResponse"/>
+    <genClasses ecoreClass="Declare.ecore#//NotPrecedence"/>
+    <genClasses ecoreClass="Declare.ecore#//NotSuccession"/>
+    <genClasses ecoreClass="Declare.ecore#//NotChainRepsonse"/>
+    <genClasses ecoreClass="Declare.ecore#//NotChainSuccessive"/>
+    <genClasses ecoreClass="Declare.ecore#//NotChainPrecedence"/>
+    <genClasses ecoreClass="Declare.ecore#//Choice"/>
+    <genClasses ecoreClass="Declare.ecore#//ExclusiveChoice"/>
+  </genPackages>
+</genmodel:GenModel>

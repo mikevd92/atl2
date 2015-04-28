@@ -1,0 +1,40 @@
+-- @path RoleModel=/ResourcePetriNet2ResourceModel/RoleModel.ecore
+-- @path PetriNet=/ResourcePetriNet2ResourceModel/PetriNet.ecore
+
+module PetriNet2RoleModel;
+create OUT : RoleModel from IN : PetriNet;
+
+helper context PetriNet!Transition def: places: Sequence(PetriNet!Place)=
+	(PetriNet!InputArc.allInstances() -> select(r | r.InputArcToTransition=self)) -> collect(e | e.InputArcFromPlace);
+
+rule PN2RM {
+	from
+		pn : PetriNet!PetriNet
+	to
+		rm : RoleModel!RoleModel (
+			name <- pn.name,
+			tasks <- pn.containsTransitions,
+			resources <- pn.containsGenericPlaces
+			
+		)
+}
+rule Resource2Resource{
+	from 
+		resource1:PetriNet!Resource(resource1.oclIsKindOf(PetriNet!Resource))
+	to
+		resource2:RoleModel!Resource(
+			role <- resource1.name,
+			nrOfResources <- resource1.numberOfTokens
+		)
+}
+
+rule Transition2Task{
+	from 
+		transition:PetriNet!Transition
+	to
+		task:RoleModel!Task(
+			name <- transition.name,
+			isPrecededBy <- ( PetriNet!OutputArc.allInstances() -> select(r | r.OutputArcFromTransition<>transition and transition.places -> includes(r.OutputArcToPlace) ) ) -> collect(e | e.OutputArcFromTransition),
+			taskUsesResources <- (((PetriNet!InputArc.allInstances() -> select(r | r.InputArcToTransition=transition)) -> collect(p | p.InputArcFromPlace))) -> select(r | r.oclIsKindOf(PetriNet!Resource))
+			)
+}

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="ASCII"?>
+<pNets:PetriNet
+    xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:pNets="platform:/resource/ExtendedPetriNets2ClassicalPN/PetriNets.ecore"
+    xsi:schemaLocation="platform:/resource/ExtendedPetriNets2ClassicalPN/PetriNets.ecore PetriNet.ecore">
+  <containsGenericPlaces
+      xsi:type="pNets:Resource"
+      name="A"/>
+  <containsGenericPlaces
+      xsi:type="pNets:Place"
+      name="B"/>
+  <containsGenericPlaces
+      xsi:type="pNets:Place"
+      name="C"/>
+  <containsTransitions
+      name="T1"/>
+  <containsTransitions
+      name="T2"/>
+  <containsInputArcs
+      InputArcFromPlace="//@containsGenericPlaces.0"
+      InputArcToTransition="//@containsTransitions.0"/>
+  <containsInputArcs
+      InputArcFromPlace="//@containsGenericPlaces.1"
+      InputArcToTransition="//@containsTransitions.1"/>
+  <containsInputArcs
+      InputArcFromPlace="//@containsGenericPlaces.2"
+      InputArcToTransition="//@containsTransitions.1"/>
+  <containsOutputArcs
+      OutputArcFromTransition="//@containsTransitions.0"
+      OutputArcToPlace="//@containsGenericPlaces.2"/>
+</pNets:PetriNet>

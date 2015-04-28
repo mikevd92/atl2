@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<PetriNets:PetriNet xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:PetriNets="platform:/resource/ExtPN2ClassicalPN/PetriNets.ecore">
+  <containsPlaces name="A"/>
+  <containsPlaces name="B"/>
+  <containsPlaces name="C"/>
+  <containsTransitions name="T"/>
+  <containsInputArcs InputArcFromPlace="//@containsPlaces.0" InputArcToTransition="//@containsTransitions.0"/>
+  <containsInputArcs InputArcFromPlace="//@containsPlaces.1" InputArcToTransition="//@containsTransitions.0"/>
+  <containsOutputArcs OutputArcFromTransition="//@containsTransitions.0" OutputArcToPlace="//@containsPlaces.2"/>
+</PetriNets:PetriNet>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="ASCII"?>
+<extendedPetriNets:PetriNet
+    xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:extendedPetriNets="platform:/resource/ExtPN2ClassicalPN/ExtendedPetriNets.ecore">
+  <containsGenericPlaces
+      xsi:type="extendedPetriNets:Place"
+      name="A"/>
+  <containsGenericPlaces
+      xsi:type="extendedPetriNets:InputPort"
+      name="B"/>
+  <containsGenericPlaces
+      xsi:type="extendedPetriNets:OutputPort"
+      name="C"/>
+  <containsTransitions
+      name="T"/>
+  <containsInputArcs
+      InputArcToTransition="//@containsTransitions.0"
+      InputArcFromPlace="//@containsGenericPlaces.0"/>
+  <containsInputArcs
+      InputArcToTransition="//@containsTransitions.0"
+      InputArcFromPlace="//@containsGenericPlaces.1"/>
+  <containsOutputArcs
+      OutputArcFromTransition="//@containsTransitions.0"
+      OutputArcToPlace="//@containsGenericPlaces.2"/>
+</extendedPetriNets:PetriNet>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="declare" nsURI="platform:/resource/DeclareMM/model/Declare.ecore"
+    nsPrefix="declare">
+  <eClassifiers xsi:type="ecore:EClass" name="Declare">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="containsActivities" upperBound="-1"
+        eType="#//Activity" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="containsConstraints" upperBound="-1"
+        eType="#//Constraint" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Activity">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="existenceLabel" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="init" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Constraint" abstract="true">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="label" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="toActivity" upperBound="-1"
+        eType="#//Activity"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="fromActivity" eType="#//Activity"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="RespondedExistence" eSuperTypes="#//Constraint"/>
+  <eClassifiers xsi:type="ecore:EClass" name="CoExistence" eSuperTypes="#//Constraint"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Response" eSuperTypes="#//Constraint"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Precedence" eSuperTypes="#//Constraint"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Succession" eSuperTypes="#//Constraint"/>
+  <eClassifiers xsi:type="ecore:EClass" name="AlternateResponse" eSuperTypes="#//Constraint"/>
+  <eClassifiers xsi:type="ecore:EClass" name="AlternatePrecedence" eSuperTypes="#//Constraint"/>
+  <eClassifiers xsi:type="ecore:EClass" name="ChainResponse" eSuperTypes="#//Constraint"/>
+  <eClassifiers xsi:type="ecore:EClass" name="ChainSuccession" eSuperTypes="#//Constraint"/>
+  <eClassifiers xsi:type="ecore:EClass" name="ChainPrecedence" eSuperTypes="#//Constraint"/>
+  <eClassifiers xsi:type="ecore:EClass" name="NotCoExistence" eSuperTypes="#//Constraint"/>
+  <eClassifiers xsi:type="ecore:EClass" name="NotRespondedExistence" eSuperTypes="#//Constraint"/>
+  <eClassifiers xsi:type="ecore:EClass" name="NotResponse" eSuperTypes="#//Constraint"/>
+  <eClassifiers xsi:type="ecore:EClass" name="NotPrecedence" eSuperTypes="#//Constraint"/>
+  <eClassifiers xsi:type="ecore:EClass" name="NotSuccession" eSuperTypes="#//Constraint"/>
+  <eClassifiers xsi:type="ecore:EClass" name="NotChainRepsonse" eSuperTypes="#//Constraint"/>
+  <eClassifiers xsi:type="ecore:EClass" name="NotChainSuccessive" eSuperTypes="#//Constraint"/>
+  <eClassifiers xsi:type="ecore:EClass" name="NotChainPrecedence" eSuperTypes="#//Constraint"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Choice" eSuperTypes="#//Constraint"/>
+  <eClassifiers xsi:type="ecore:EClass" name="ExclusiveChoice" eSuperTypes="#//Constraint"/>
+</ecore:EPackage>
